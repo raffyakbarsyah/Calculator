@@ -1,7 +1,8 @@
 let buttons = document.querySelectorAll('button');
-let display = document.querySelector('.display')
-
+let display = document.querySelector('.display');
 let currentInput = '';
+let firstNumber = '';
+let operator = '';
 
 buttons.forEach(button => (
   button.addEventListener('click', () => {
