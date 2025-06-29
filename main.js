@@ -28,6 +28,11 @@ buttons.forEach(button => (
       currentInput = currentInput.slice(0, -1);
       display.textContent = currentInput || "0";
       document.querySelector(".errorMessage").textContent = "";
+      }
+    
+    if (value === "%") {
+      currentInput = parseFloat(currentInput);
+      display.textContent = currentInput / 100;
     }
-  })
+  }  
 ))
