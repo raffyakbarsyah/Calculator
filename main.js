@@ -32,8 +32,8 @@ buttons.forEach(button => (
     
     if (value === "%") {
       if (currentInput === '') return;
-      currentInput = parseFloat(currentInput);
-      display.textContent = currentInput / 100;
+      currentInput = parseFloat(currentInput) / 100;
+      display.textContent = currentInput;
     }
 
     if (["x", "+", "-", "÷"].includes(value)) {
@@ -43,6 +43,36 @@ buttons.forEach(button => (
       display.textContent = currentInput + ' ' + value;
       currentInput = '';
       return;
+    }
+
+    if (value === "=") {
+      if (firstNumber === '' || currentInput === '' || operator === '') return;
+      let secondNumber = parseFloat(currentInput);
+      let result;
+
+
+      switch (operator) {
+        case "+":
+          result = firstNumber + secondNumber;
+          break;
+
+        case "-":
+          result = firstNumber - secondNumber;
+          break;
+        
+        case "x":
+          result = firstNumber * secondNumber;
+          break;
+
+        case "÷":
+          result = firstNumber * secondNumber;
+          break;
+      }
+
+      display.textContent = result;
+      currentInput = result.toString();
+      firstNumber = '';
+      operator;
     }
 
   
