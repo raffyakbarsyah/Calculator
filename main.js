@@ -69,12 +69,14 @@ buttons.forEach(button => (
           break;
       }
 
+      if (result.toString().length >= 10) {
+      result =  result.toFixed(1);
+    }
+
       display.textContent = result;
       currentInput = result.toString();
       firstNumber = '';
-      operator;
+      operator = '';
     }
-
-  
   }  
 )))
