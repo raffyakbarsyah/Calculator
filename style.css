@@ -58,8 +58,15 @@ body {
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center ;
+  }
 
-    
+  .specialButton {
+    background-color: #4e744f;
+    color: white;
+  }
+
+  .operatorButton {
+    background-color: #97d599;
   }
 
   
