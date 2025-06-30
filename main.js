@@ -65,7 +65,13 @@ buttons.forEach(button => (
           break;
 
         case "÷":
-          result = firstNumber * secondNumber;
+          if (secondNumber === 0) {
+            result = "error";
+            document.querySelector(".errorMessage").textContent = "Unable to divide by zero";
+          } else {
+            result = firstNumber / secondNumber;
+            document.querySelector(".errorMessage").textContent = "";
+          }
           break;
       }
 
