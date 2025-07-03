@@ -15,7 +15,7 @@ buttons.forEach(button => (
       }
 
       currentInput += value;
-      display.textContent = currentInput;
+      display.textContent = firstNumber + operator + currentInput;
     }
 
     if (value === "AC") {
@@ -40,7 +40,7 @@ buttons.forEach(button => (
       if (currentInput === '') return;
       firstNumber = parseFloat(currentInput);
       operator = value;
-      display.textContent = currentInput + ' ' + value;
+      display.textContent = currentInput + value;
       currentInput = '';
       return;
     }
