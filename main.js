@@ -28,9 +28,9 @@ buttons.forEach(button => (
 
     if (value === "⌫") {
       currentInput = currentInput.slice(0, -1);
-      display.textContent = currentInput || "0";
+      display.textContent = (firstNumber ? firstNumber : '') + (operator ? operator : '') + (currentInput || "");
       document.querySelector(".errorMessage").textContent = "";
-      }
+    }
     
     if (value === "%") {
       if (currentInput === '') return;
@@ -72,7 +72,7 @@ buttons.forEach(button => (
           }
           break;
         }
-        firstNumber = result;
+        firstNumber = result.toString();
         currentInput = '';
         operator = value;
         display.textContent = result + operator;
