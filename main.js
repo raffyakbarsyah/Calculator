@@ -30,6 +30,10 @@ buttons.forEach(button => (
       currentInput = currentInput.slice(0, -1);
       display.textContent = (firstNumber ? firstNumber : '') + (operator ? operator : '') + (currentInput || "");
       document.querySelector(".errorMessage").textContent = "";
+
+      if (currentInput.length < 1) {
+        display.textContent = "0";
+      }
     }
     
     if (value === "%") {
