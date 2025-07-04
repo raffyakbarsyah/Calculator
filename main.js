@@ -76,7 +76,7 @@ buttons.forEach(button => (
           }
           break;
         }
-        firstNumber = result.toString();
+        firstNumber = parseFloat(result);
         currentInput = '';
         operator = value;
         display.textContent = result + operator;
@@ -127,7 +127,7 @@ buttons.forEach(button => (
 
       display.textContent = result;
       currentInput = result.toString();
-      firstNumber = '';
+      firstNumber = parseFloat(result);
       operator = '';
     }
   }  
