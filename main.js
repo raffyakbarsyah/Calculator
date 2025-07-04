@@ -20,6 +20,8 @@ buttons.forEach(button => (
 
     if (value === "AC") {
       currentInput = '';
+      firstNumber = '';
+      operator = '';
       display.textContent = "0";
       document.querySelector(".errorMessage").textContent = ""; 
     }
@@ -37,12 +39,52 @@ buttons.forEach(button => (
     }
 
     if (["x", "+", "-", "÷"].includes(value)) {
-      if (currentInput === '') return;
-      firstNumber = parseFloat(currentInput);
-      operator = value;
-      display.textContent = currentInput + value;
-      currentInput = '';
-      return;
+      if (currentInput === '' && firstNumber === '') return;
+
+      if (currentInput != '' && operator != '' && firstNumber != '') {
+        let secondNumber = parseFloat(currentInput);
+        let result;
+
+        switch(operator) {
+         case "+":
+          result = firstNumber + secondNumber;
+          break;
+
+        case "-":
+          result = firstNumber - secondNumber;
+          break;
+        
+        case "x":
+          result = firstNumber * secondNumber;
+          break;
+
+        case "÷":
+          if (secondNumber === 0) {
+            result = "error";
+            document.querySelector(".errorMessage").textContent = "Unable to divide by zero";
+            firstNumber = '';
+            currentInput = '';
+            operator = '';
+            return;
+          } else {
+            result = firstNumber / secondNumber;
+            document.querySelector(".errorMessage").textContent = "";
+          }
+          break;
+        }
+        firstNumber = result;
+        currentInput = '';
+        operator = value;
+        display.textContent = result + operator;
+      }
+
+      else {
+        firstNumber = parseFloat(currentInput);
+        operator = value;
+        display.textContent = firstNumber + operator;
+        currentInput = '';
+        return;
+      }
     }
 
     if (value === "=") {
