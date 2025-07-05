@@ -49,7 +49,7 @@ It supports essential arithmetic operations with interactive UI and user feedbac
 ## 👨‍💻 Author
 
 **Raffy Akbarsyah**  
-Created as part of [The Odin Project](https://www.theodinproject.com/)'s Foundations curriculum – 2025
+Created as part of [The Odin Project](https://www.theodinproject.com/)'s Foundations curriculum (2025)
 
 ---
 
