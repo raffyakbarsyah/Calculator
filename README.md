@@ -1,4 +1,4 @@
-# 🌿 Simple Calculator (The Odin Project – Foundations Final Project)
+#  Simple Calculator (The Odin Project – Foundations Final Project)
 
 This is a **basic calculator web application** built using **HTML**, **CSS**, and **JavaScript**, developed as the **final project of The Odin Project – Foundations course**.
 
