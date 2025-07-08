@@ -3,11 +3,19 @@ let display = document.querySelector('.display');
 let currentInput = '';
 let firstNumber = '';
 let operator = '';
+let justEvaluated = false;
 
 buttons.forEach(button => (
   button.addEventListener('click', () => {
     let value = button.textContent.trim();
     if (!["AC", "⌫", "=", "x", "+", "-", "÷", "%"].includes(value)) {
+
+        if (justEvaluated) {
+        currentInput = '';
+        firstNumber = '';
+        operator = '';
+        justEvaluated = false;
+      }
       if (currentInput.length >= 10) {
         const error = document.querySelector(".errorMessage");
         error.textContent = "Limit: Only 10 digits allowed (up to billions).";
@@ -27,6 +35,23 @@ buttons.forEach(button => (
     }
 
     if (value === "⌫") {
+
+      if (justEvaluated) {
+        currentInput = currentInput.toString().slice(0, -1);
+        display.textContent = currentInput || "0";
+
+        // Reset evaluation mode once user edits the result
+        if (currentInput.length < 1) {
+          currentInput = '';
+          firstNumber = '';
+          operator = '';
+          justEvaluated = false;
+        }
+
+        return;
+      }
+
+
       currentInput = currentInput.slice(0, -1);
       display.textContent = (firstNumber ? firstNumber : '') + (operator ? operator : '') + (currentInput || "");
       document.querySelector(".errorMessage").textContent = "";
@@ -129,6 +154,8 @@ buttons.forEach(button => (
       currentInput = result.toString();
       firstNumber = parseFloat(result);
       operator = '';
+      justEvaluated = true;
+
     }
   }  
 )))
