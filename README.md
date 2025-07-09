@@ -39,13 +39,6 @@ It supports essential arithmetic operations with interactive UI and user feedbac
 
 ---
 
-## 🐛 Known Issues / Possible Bugs
-
-- No keyboard support — only works via mouse clicks (currently in progress).
-- UI does not resize well on very small screens (not fully responsive, as expected).
-
----
-
 ## 👨‍💻 Author
 
 **Raffy Akbarsyah**  
