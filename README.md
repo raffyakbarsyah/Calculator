@@ -2,7 +2,7 @@
 
 This is a **basic calculator web application** built using **HTML**, **CSS**, and **JavaScript**, developed as the **final project of The Odin Project Foundations course**.
 
-It supports essential arithmetic operations with interactive UI and user feedback for certain edge case (like divide-by-zero and digit overflow).
+It supports essential arithmetic operations with interactive UI and user feedback for certain edge case (like divide by zero and digit overflow).
 
 ---
 
