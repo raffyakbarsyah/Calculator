@@ -22,7 +22,7 @@ It supports essential arithmetic operations with interactive UI and user feedbac
 
 > Designed with a minimalist aesthetic and green-themed interface.
 
-- Calculator display at the top
+- Calculator display 
 - 4x5 button layout (numbers, operators, control buttons)
 - Error messages shown below the buttons
 - Fixed footer with my name
