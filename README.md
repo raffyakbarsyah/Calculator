@@ -13,7 +13,6 @@ It supports essential arithmetic operations with interactive UI and user feedbac
 - ✅ Clear all (`AC`) and backspace (`⌫`)
 - ✅ Digit input limit (10 digits)
 - ✅ Error messages (e.g., divide by zero, input limit)
-- ✅ Modern, responsive UI
 - ✅ Styled using pure CSS
 
 ---
