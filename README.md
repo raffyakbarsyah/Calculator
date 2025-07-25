@@ -24,7 +24,7 @@ It supports essential arithmetic operations with interactive UI and user feedbac
 - Calculator display 
 - 4x5 button layout (numbers, operators, control buttons)
 - Error messages shown below the buttons
-- Fixed footer with my name
+- Fixed footer
 
 ---
 
